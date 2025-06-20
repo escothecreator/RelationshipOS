@@ -1,0 +1,171 @@
+{
+  "WFWorkflowMinimumClientVersionString": "900",
+  "WFWorkflowMinimumClientVersion": 900,
+  "WFWorkflowIcon": {
+    "WFWorkflowIconStartColor": 2846468607,
+    "WFWorkflowIconGlyphNumber": 61440
+  },
+  "WFWorkflowClientVersion": "2605.0.5",
+  "WFWorkflowOutputContentItemClasses": [
+    "WFStringContentItem"
+  ],
+  "WFWorkflowHasOutputFallback": false,
+  "WFWorkflowActions": [
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.clipboard.get",
+      "WFWorkflowActionParameters": {}
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.gettext",
+      "WFWorkflowActionParameters": {
+        "WFTextActionText": {
+          "Value": {
+            "string": "Processing your message...",
+            "attachmentsByRange": {}
+          },
+          "WFSerializationType": "WFTextTokenString"
+        }
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.notification",
+      "WFWorkflowActionParameters": {
+        "WFNotificationActionTitle": "RelationshipOS",
+        "WFNotificationActionBody": {
+          "Value": {
+            "string": "🚀 Generating smart reply...",
+            "attachmentsByRange": {}
+          },
+          "WFSerializationType": "WFTextTokenString"
+        }
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.downloadurl",
+      "WFWorkflowActionParameters": {
+        "WFURL": "https://escothecreator.github.io/RelationshipOS/api/shortcuts-handler",
+        "WFHTTPMethod": "POST",
+        "WFHTTPBodyType": "JSON",
+        "WFJSONValues": {
+          "Value": {
+            "WFDictionaryFieldValueItems": [
+              {
+                "WFItemType": 0,
+                "WFKey": {
+                  "Value": {
+                    "string": "message",
+                    "attachmentsByRange": {}
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                },
+                "WFValue": {
+                  "Value": {
+                    "string": "🚀",
+                    "attachmentsByRange": {
+                      "{0, 1}": {
+                        "Type": "ActionOutput",
+                        "OutputName": "Clipboard",
+                        "OutputUUID": "clipboard-content"
+                      }
+                    }
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                }
+              },
+              {
+                "WFItemType": 0,
+                "WFKey": {
+                  "Value": {
+                    "string": "userId",
+                    "attachmentsByRange": {}
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                },
+                "WFValue": {
+                  "Value": {
+                    "string": "user123",
+                    "attachmentsByRange": {}
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                }
+              },
+              {
+                "WFItemType": 0,
+                "WFKey": {
+                  "Value": {
+                    "string": "context",
+                    "attachmentsByRange": {}
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                },
+                "WFValue": {
+                  "Value": {
+                    "string": "quick_reply",
+                    "attachmentsByRange": {}
+                  },
+                  "WFSerializationType": "WFTextTokenString"
+                }
+              }
+            ]
+          },
+          "WFSerializationType": "WFDictionaryFieldValue"
+        }
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.getvalueforkey",
+      "WFWorkflowActionParameters": {
+        "WFDictionaryKey": "suggestedResponse"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.clipboard.set",
+      "WFWorkflowActionParameters": {}
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.notification",
+      "WFWorkflowActionParameters": {
+        "WFNotificationActionTitle": "RelationshipOS ✅",
+        "WFNotificationActionBody": {
+          "Value": {
+            "string": "Smart reply copied to clipboard! Tap to paste in chat.",
+            "attachmentsByRange": {}
+          },
+          "WFSerializationType": "WFTextTokenString"
+        }
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.openapp",
+      "WFWorkflowActionParameters": {
+        "WFAppIdentifier": "net.whatsapp.WhatsApp"
+      }
+    }
+  ],
+  "WFWorkflowInputContentItemClasses": [
+    "WFAppStoreAppContentItem",
+    "WFArticleContentItem",
+    "WFContactContentItem",
+    "WFDateContentItem",
+    "WFEmailAddressContentItem",
+    "WFGenericFileContentItem",
+    "WFImageContentItem",
+    "WFiTunesProductContentItem",
+    "WFLocationContentItem",
+    "WFDCMapsLinkContentItem",
+    "WFAVAssetContentItem",
+    "WFPDFContentItem",
+    "WFPhoneNumberContentItem",
+    "WFRichTextContentItem",
+    "WFSafariWebPageContentItem",
+    "WFStringContentItem",
+    "WFURLContentItem"
+  ],
+  "WFWorkflowImportQuestions": [],
+  "WFWorkflowTypes": [
+    "NCWidget",
+    "WatchKit"
+  ],
+  "WFQuickActionSurfaces": [],
+  "WFWorkflowHasShortcutInputVariables": false
+}
